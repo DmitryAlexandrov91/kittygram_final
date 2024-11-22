@@ -17,16 +17,13 @@ services:
     env_file: .env
     volumes:
       - static:/backend_static
-      - media:/var/www/kittygram/media/
+      - media:/app/media
     depends_on:
       - db
   
   frontend:
-    build: ./frontend/
     env_file: .env
-    command: cp -r /app/build/. /static/
-    volumes:
-      - static:/static
+    build: ./frontend/
 
   gateway:
     build: ./nginx/
@@ -34,5 +31,5 @@ services:
     ports:
       - 9000:80
     volumes:
-      - static:/static/
-      - media:/var/www/kittygram/media/
+      - static:/staticfiles/
+      - media:/app/media

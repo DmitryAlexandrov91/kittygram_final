@@ -1,14 +1,19 @@
-# flake8: noqa
+from dotenv import load_dotenv
+from django.core.management.utils import get_random_secret_key
 import os
 from pathlib import Path
 
+from utils import debug_bool_check, get_allowed_hosts
+
+load_dotenv()
+
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-SECRET_KEY = 'django-insecure-cg6*%6d51ef8f#4!r3*$vmxm4)abgjw8mo!4y-q*uq1!4$-89$'
+SECRET_KEY = os.getenv('SECRET_KEY', get_random_secret_key())
 
-DEBUG = True
+DEBUG = debug_bool_check()
 
-ALLOWED_HOSTS = ['ald-kitty.zapto.org', '89.169.175.34', '127.0.0.1', 'localhost']
+ALLOWED_HOSTS = get_allowed_hosts()
 
 INSTALLED_APPS = [
     'django.contrib.admin',
