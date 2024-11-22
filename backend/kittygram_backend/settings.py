@@ -1,8 +1,9 @@
 """Kittygram project settings."""
 from dotenv import load_dotenv
-from django.core.management.utils import get_random_secret_key
 import os
 from pathlib import Path
+
+from django.core.management.utils import get_random_secret_key
 
 from utils import debug_bool_check, get_allowed_hosts
 
