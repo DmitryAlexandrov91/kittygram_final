@@ -12,5 +12,5 @@ def debug_bool_check():
 
 
 def get_allowed_hosts():
-    allowed_hosts = os.getenv('ALLOWED_HOSTS', 'localhost', '127.0.0.1')
+    allowed_hosts = os.getenv('ALLOWED_HOSTS', 'localhost, 127.0.0.1')
     return [host.strip() for host in allowed_hosts.split(',')]
