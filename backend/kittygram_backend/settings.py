@@ -13,9 +13,13 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = os.getenv('SECRET_KEY', get_random_secret_key())
 
-DEBUG = debug_bool_check()
+# DEBUG = debug_bool_check()
 
-ALLOWED_HOSTS = get_allowed_hosts()
+DEBUG = True
+
+# ALLOWED_HOSTS = get_allowed_hosts()
+
+ALLOWED_HOSTS = ['ald-kitty.zapto.org', '89.169.175.34', '127.0.0.1', 'localhost']
 
 INSTALLED_APPS = [
     'django.contrib.admin',
