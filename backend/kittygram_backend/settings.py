@@ -5,7 +5,7 @@ from pathlib import Path
 
 from django.core.management.utils import get_random_secret_key
 
-# from .utils import debug_bool_check, get_allowed_hosts
+from .utils import debug_bool_check, get_allowed_hosts
 
 load_dotenv()
 
@@ -13,13 +13,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = os.getenv('SECRET_KEY', get_random_secret_key())
 
-# DEBUG = debug_bool_check()
+DEBUG = debug_bool_check()
 
-DEBUG = True
-
-# ALLOWED_HOSTS = get_allowed_hosts()
-
-ALLOWED_HOSTS = ['ald-kitty.zapto.org', '89.169.175.34', '127.0.0.1', 'localhost']
+ALLOWED_HOSTS = get_allowed_hosts()
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -75,14 +71,6 @@ DATABASES = {
         'PORT': os.getenv('DB_PORT', 5432)
     }
 }
-
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
-#     }
-# }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
