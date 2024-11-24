@@ -1,9 +1,6 @@
 name: Main Kittygram Workflow
 
-on:
-  push:
-    branches:
-      - '*'
+on: push
 
 jobs:
   tests:
@@ -171,6 +168,6 @@ jobs:
       with:
         to: ${{ secrets.TELEGRAM_TO }}
         token: ${{ secrets.TELEGRAM_TOKEN }}
-        message: 
+        message: |
           ${{ github.actor }} сделал push c сообщением ${{ github.event.commits[0].message }}
           Ссылка на коммит https://github.com/${{ github.repository }}/commit/${{ github.sha }}
