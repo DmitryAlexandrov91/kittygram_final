@@ -5,10 +5,7 @@ load_dotenv()
 
 
 def debug_bool_check():
-    if os.getenv('DEBUG'):
-        if os.getenv('DEBUG').lower() == 'true':
-            return True
-    return False
+    return os.getenv('DEBUG').lower() == 'true'
 
 
 def get_allowed_hosts():
