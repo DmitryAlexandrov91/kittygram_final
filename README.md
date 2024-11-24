@@ -1,4 +1,7 @@
+![Main Kittygram Workflow](https://github.com/github/docs/actions/workflows/main.yml/badge.svg)
+
 #  Как работать с репозиторием финального задания
+
 
 ## Что нужно сделать
 
