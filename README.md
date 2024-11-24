@@ -1,6 +1,5 @@
-![Main Kittygram Workflow](https://github.com/github/docs/actions/workflows/main.yml/badge.svg)
+![Main Kittygram Workflow](https://github.com/DmitryAlexandrov91/kittygram_final/actions/workflows/Main Kittygram Workflow/badge.svg)
 
-https://github.com/DmitryAlexandrov91/kittygram_final/actions/workflows/Main Kittygram Workflow/badge.svg
 
 #  Как работать с репозиторием финального задания
 
