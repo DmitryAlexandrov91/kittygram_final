@@ -71,5 +71,5 @@ Kittygram — это веб-приложение, позволяющее пол�
 
 Александров Дмитрий Александрович
 
-- GitHUb: DmitryAlexandrov91
-- Docker: aldmal
+<u>GitHub</u>
+ - https://github.com/DmitryAlexandrov91
